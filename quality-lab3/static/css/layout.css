@@ -1,0 +1,135 @@
+/* ==========================================================
+   layout.css — КАРКАС СТРАНИЦ
+   Контейнеры, вертикальные отступы секций и сетки (Grid).
+   Сколько колонок на каком экране — решается здесь.
+   ========================================================== */
+
+/* ---------- Контейнеры ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Узкий контейнер для блоков «Инструкция», «Отзывы», карты и формы (контент 720px) */
+.container--narrow {
+  max-width: calc(720px + 2 * var(--container-padding));
+}
+
+.section-title {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* ---------- Вертикальные отступы секций ---------- */
+.features,
+.services,
+.how,
+.reviews { padding: var(--space-xl) 0; }
+
+.features { padding-top: var(--space-2xl); }
+
+.price-section { padding: var(--space-xl) 0; }
+
+.barbers { padding: var(--space-xl) 0; }
+
+.about,
+.map-section,
+.booking { padding: var(--space-xl) 0; }
+
+/* ---------- Сетки (по умолчанию — мобильная: одна колонка) ---------- */
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.barbers__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-bottom: var(--space-xl);
+}
+
+.form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* ---------- Tablet (от 768px) ---------- */
+@media (min-width: 768px) {
+  .features__grid,
+  .services__grid,
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .barbers__grid,
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .form__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) var(--space-lg);
+  }
+
+  .form__field--full { grid-column: 1 / -1; }
+}
+
+/* ---------- Desktop (от 1024px и 1280px) ---------- */
+@media (min-width: 1024px) {
+  .about__grid { grid-template-columns: 1fr 1fr; gap: var(--space-2xl); }
+}
+
+@media (min-width: 1280px) {
+  .features__grid,
+  .services__grid,
+  .price-grid,
+  .barbers__grid,
+  .info-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

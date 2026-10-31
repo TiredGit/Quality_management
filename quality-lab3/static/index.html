@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAFIOZI — барбершоп в центре города. Мужские стрижки, борода, детские стрижки. Запись онлайн.">
+  <title>MAFIOZI — барбершоп</title>
+
+  <!-- Применяем сохранённую тему ДО отрисовки страницы, чтобы не было «мигания» -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3ba7hsdd3");
+  </script>
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="logo">
+        <img src="img/hairstyle 1.webp" alt="" class="logo__img" width="40" height="40">
+        <span class="logo__text">MAFIOZI</span>
+      </a>
+
+      <!-- На мобильном это полноэкранное меню, на планшете и десктопе — обычная навигация -->
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <button type="button" class="icon-btn nav__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+        <a href="index.html" class="nav__link nav__link--active" aria-current="page">Главная</a>
+        <a href="services.html" class="nav__link">Услуги</a>
+        <a href="barbers.html" class="nav__link">Мастера</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему">
+          <img src="img/theme_light_dark_icon_137104 1.svg" alt="" class="theme-toggle__img" width="28" height="28">
+        </button>
+        <button type="button" class="icon-btn burger" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img src="img/main hero.webp" alt="Интерьер барбершопа MAFIOZI" class="hero__bg" fetchpriority="high">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Лучшая стрижка в центре города</h1>
+        <a href="contacts.html#booking" class="btn btn--accent btn--lg">Записаться</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title reveal">Почему выбирают нас?</h2>
+        <div class="features__grid reveal">
+          <article class="feature">
+            <img src="img/Features1.svg" alt="" class="feature__icon">
+            <div class="feature__body">
+              <h3 class="feature__title">1. Опытные мастера</h3>
+              <p class="feature__text">Стаж каждого барбера от 5 лет. Работаем с любым типом волос и бороды</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="img/Features2.svg" alt="" class="feature__icon">
+            <div class="feature__body">
+              <h3 class="feature__title">2. Запись онлайн</h3>
+              <p class="feature__text">Выберите время сами, без звонков и ожидания в очереди</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="img/Features3.svg" alt="" class="feature__icon">
+            <div class="feature__body">
+              <h3 class="feature__title">3. Премиальный уход</h3>
+              <p class="feature__text">Используем профессиональную косметику для волос и бороды</p>
+            </div>
+          </article>
+          <article class="feature">
+            <img src="img/Features4.svg" alt="" class="feature__icon">
+            <div class="feature__body">
+              <h3 class="feature__title">4. Атмосфера</h3>
+              <p class="feature__text">Кожаные кресла, хорошая музыка и кофе или виски для гостей</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title reveal">Основные услуги</h2>
+        <div class="services__grid reveal">
+          <article class="service">
+            <img src="img/service1.webp" alt="" class="service__img" loading="lazy">
+            <div class="service__body">
+              <h3 class="service__title">Мужская стрижка</h3>
+              <p class="service__price">1500 руб.</p>
+            </div>
+          </article>
+          <article class="service">
+            <img src="img/service2.webp" alt="" class="service__img" loading="lazy">
+            <div class="service__body">
+              <h3 class="service__title">Моделирование бороды</h3>
+              <p class="service__price">1000 руб.</p>
+            </div>
+          </article>
+          <article class="service">
+            <img src="img/service3.webp" alt="" class="service__img" loading="lazy">
+            <div class="service__body">
+              <h3 class="service__title">Стрижка + борода</h3>
+              <p class="service__price">2300 руб.</p>
+            </div>
+          </article>
+          <article class="service">
+            <img src="img/service4.webp" alt="" class="service__img" loading="lazy">
+            <div class="service__body">
+              <h3 class="service__title">Детская стрижка</h3>
+              <p class="service__price">1200 руб.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container container--narrow">
+        <h2 class="section-title reveal">Инструкция по записи</h2>
+        <div class="how__box reveal">
+          <ol class="how__list">
+            <li>Выберите услугу и мастера</li>
+            <li>Выберите удобное время</li>
+            <li>Приходите к нам в выбранное время</li>
+            <li>Оплата после процедуры</li>
+          </ol>
+          <p class="how__phone">Либо позвоните по номеру <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="container container--narrow">
+        <h2 class="section-title reveal">Отзывы</h2>
+        <div class="reviews__grid reveal">
+          <article class="review">
+            <h3 class="review__author">Алексей</h3>
+            <p class="review__text">Лучшая борода в моей жизни. Мастер подробно объяснил, как за ней ухаживать</p>
+          </article>
+          <article class="review">
+            <h3 class="review__author">Максим</h3>
+            <p class="review__text">Приятная атмосфера и никаких очередей. Рекомендую всем друзьям</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container cta__inner reveal">
+        <a href="contacts.html#booking" class="btn btn--accent btn--lg">Записаться онлайн</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__line">MAFIOZI</p>
+      <p class="footer__line">г. Москва, ул. Примерная, 10</p>
+      <p class="footer__line">+7 (900) 000-00-00 &nbsp; Ежедневно с 10:00 до 21:00</p>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="index.html" class="footer__link">Главная</a>
+        <a href="services.html" class="footer__link">Услуги</a>
+        <a href="barbers.html" class="footer__link">Мастера</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </nav>
+      <p class="footer__line">© 2026 MAFIOZI. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

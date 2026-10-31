@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты барбершопа MAFIOZI: адрес, телефон, часы работы, карта и онлайн-запись на стрижку.">
+  <title>Контакты и запись — MAFIOZI</title>
+
+  <!-- Применяем сохранённую тему ДО отрисовки страницы, чтобы не было «мигания» -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/form.js" defer></script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3ba7hsdd3");
+  </script>  
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="logo">
+        <img src="img/hairstyle 1.webp" alt="" class="logo__img" width="40" height="40">
+        <span class="logo__text">MAFIOZI</span>
+      </a>
+
+      <!-- На мобильном это полноэкранное меню, на планшете и десктопе — обычная навигация -->
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <button type="button" class="icon-btn nav__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="services.html" class="nav__link">Услуги</a>
+        <a href="barbers.html" class="nav__link">Мастера</a>
+        <a href="contacts.html" class="nav__link nav__link--active" aria-current="page">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему">
+          <img src="img/theme_light_dark_icon_137104 1.svg" alt="" class="theme-toggle__img" width="28" height="28">
+        </button>
+        <button type="button" class="icon-btn burger" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок страницы -->
+    <section class="page-head">
+      <div class="container">
+        
+        <h1 class="page-head__title">Контакты</h1>
+        <p class="page-head__lead">Свяжитесь с нами любым удобным способом или запишитесь онлайн прямо на этой странице.</p>
+
+        <ul class="chips" aria-label="Разделы страницы">
+          <li><a href="#about" class="chip">О нас</a></li>
+          <li><a href="#map" class="chip">Как нас найти</a></li>
+          <li><a href="#booking" class="chip">Запись онлайн</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- О барбершопе + контактная информация -->
+    <section class="about" id="about">
+      <div class="container">
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <h2 class="about__title">О барбершопе</h2>
+            <p>MAFIOZI — барбершоп в центре города для тех, кто ценит качество и атмосферу. Мы соединили классическое мастерство барберов с современным интерьером: кожаные кресла, тёплый свет и хорошая музыка.</p>
+            <p>Мы работаем без очередей: запись онлайн, свободное время видно сразу. Используем профессиональную косметику и стерильные инструменты, а каждому гостю предлагаем горячее полотенце и напиток на выбор.</p>
+          </div>
+
+          <!-- Фото интерьера. Файл: img/about.jpg (рекомендуется 1200×900, формат 4:3) -->
+          <img src="img/main hero.webp" alt="Интерьер барбершопа MAFIOZI" class="about__img reveal" width="1200" height="900" loading="lazy" decoding="async">
+        </div>
+
+        <div class="info-grid reveal">
+          <article class="info-card">
+            <h3 class="info-card__title">Адрес</h3>
+            <p class="info-card__text">г. Москва, ул. Примерная, 10</p>
+          </article>
+          <article class="info-card">
+            <h3 class="info-card__title">Телефон</h3>
+            <p class="info-card__text"><a href="tel:+79000000000" class="info-card__link">+7 (900) 000-00-00</a></p>
+          </article>
+          <article class="info-card">
+            <h3 class="info-card__title">Часы работы</h3>
+            <p class="info-card__text">Ежедневно с 10:00 до 21:00</p>
+          </article>
+          <article class="info-card">
+            <h3 class="info-card__title">Соцсети</h3>
+            <p class="info-card__text">
+              <a href="#" class="info-card__link">Telegram</a>,
+              <a href="#" class="info-card__link">VK</a>,
+              <a href="#" class="info-card__link">Instagram</a>
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="map-section" id="map">
+      <div class="container container--narrow">
+        <h2 class="section-title reveal">Как нас найти</h2>
+
+        <div class="map reveal">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A81f426e7bbea614902abab64bc09535d80137a7497f3dda0f6a64bde5db878f0&amp;source=constructor" width="800" height="400" frameborder="0"></iframe>
+        </div>
+
+        <p class="map__note reveal">
+          Ближайшая станция метро в 5 минутах пешком, рядом есть бесплатная парковка.
+        </p>
+      </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="booking" id="booking">
+      <div class="container container--narrow">
+        <h2 class="section-title reveal">Запись онлайн</h2>
+
+        <form class="form booking-form reveal">
+          <div class="form__grid">
+
+            <div class="form__field">
+              <label class="form__label" for="booking-name">Ваше имя</label>
+              <input class="input" type="text" id="booking-name" name="name" placeholder="Иван" autocomplete="given-name" required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="booking-phone">Телефон</label>
+              <input class="input" type="tel" id="booking-phone" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel" inputmode="tel" minlength="10" required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="booking-service">Услуга</label>
+              <select class="select" id="booking-service" name="service" required>
+                <option value="" selected disabled>Выберите услугу</option>
+                <optgroup label="Стрижки">
+                  <option>Мужская стрижка</option>
+                  <option>Стрижка машинкой</option>
+                  <option>Фейд</option>
+                  <option>Детская стрижка</option>
+                </optgroup>
+                <optgroup label="Борода и бритьё">
+                  <option>Моделирование бороды</option>
+                  <option>Королевское бритьё</option>
+                  <option>Бритьё головы</option>
+                  <option>Оформление усов</option>
+                </optgroup>
+                <optgroup label="Комплексы">
+                  <option>Стрижка + борода</option>
+                  <option>Отец + сын</option>
+                  <option>Стрижка + бритьё</option>
+                  <option>VIP-комплекс</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="booking-barber">Мастер</label>
+              <select class="select" id="booking-barber" name="barber">
+                <option value="any" selected>Любой свободный мастер</option>
+                <option value="artem">Артём</option>
+                <option value="dmitry">Дмитрий</option>
+                <option value="kirill">Кирилл</option>
+                <option value="roman">Роман</option>
+              </select>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="booking-date">Дата</label>
+              <input class="input" type="date" id="booking-date" name="date" required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="booking-time">Время</label>
+              <select class="select" id="booking-time" name="time" required>
+                <option value="" selected disabled>Выберите время</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+              </select>
+            </div>
+
+            <div class="form__field form__field--full">
+              <label class="form__label" for="booking-comment">Комментарий <span class="form__optional">(необязательно)</span></label>
+              <textarea class="textarea" id="booking-comment" name="comment" rows="3" placeholder="Например, хочу стрижку как на фото"></textarea>
+            </div>
+
+            <div class="form__field form__field--full">
+              <label class="check" for="booking-agree">
+                <input class="check__input" type="checkbox" id="booking-agree" name="agree" required>
+                <span>Согласен на обработку персональных данных</span>
+              </label>
+            </div>
+
+            <div class="form__field form__field--full">
+              <button type="submit" class="btn btn--accent btn--lg btn--block">Записаться</button>
+              <p class="form__hint">Перезвоним в течение 15 минут для подтверждения</p>
+            </div>
+
+            <!-- Сообщение после отправки (озвучивается скринридерами) -->
+            <p class="form__status form__field--full" role="status" aria-live="polite"></p>
+
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__line">MAFIOZI</p>
+      <p class="footer__line">г. Москва, ул. Примерная, 10</p>
+      <p class="footer__line">+7 (900) 000-00-00 &nbsp; Ежедневно с 10:00 до 21:00</p>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="index.html" class="footer__link">Главная</a>
+        <a href="services.html" class="footer__link">Услуги</a>
+        <a href="barbers.html" class="footer__link">Мастера</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </nav>
+      <p class="footer__line">© 2026 MAFIOZI. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

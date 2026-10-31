@@ -1,0 +1,107 @@
+/* ==========================================================
+   tokens.css — ДИЗАЙН-ТОКЕНЫ
+   Только переменные: цвета, типографика, отступы, радиусы,
+   размеры контейнера. Здесь же тёмная и светлая темы.
+   ========================================================== */
+
+/* ---------- Тёмная тема (по умолчанию) ---------- */
+:root {
+  color-scheme: dark;
+
+  /* Colors */
+  --color-primary: #2A2623;
+  --color-secondary: #6B4E3D;
+  --color-accent: #C9A34F;
+  --color-accent-hover: #D8B665;
+  --color-text: #F5F1EA;
+  --color-text-muted: #C9C2B8;
+  --color-bg: #141414;
+  --color-bg-alt: #2A2623;      /* фон карточек */
+  --color-link: #C9A34F;        /* цвет ссылок в тексте */
+  --color-focus: #F5F1EA;       /* цвет рамки фокуса */
+  --color-error: #E8836F;       /* ошибка в полях формы */
+  --color-border: var(--color-secondary);   /* рамки полей и карточек */
+  --color-surface: var(--color-bg-alt);     /* фон карточек и форм */
+
+  /* Цвета, которые НЕ зависят от темы
+     (шапка, подвал, меню и текст на фото всегда на тёмном фоне) */
+  --color-on-dark: #F5F1EA;
+  --color-on-accent: #141414;
+
+  /* Прочее, что меняется с темой */
+  --icon-filter: none;          /* светлые иконки остаются светлыми */
+  --shadow-hover: 0 12px 24px rgba(0, 0, 0, .4);
+
+  /* Typography */
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --fs-xs: 0.75rem;     /* 12 */
+  --fs-sm: 0.875rem;    /* 14 */
+  --fs-base: 1rem;      /* 16 */
+  --fs-lg: 1.25rem;     /* 20 */
+  --fs-xl: 1.5625rem;   /* 25 */
+  --fs-2xl: 1.9375rem;  /* 31 */
+  --fs-3xl: 2.4375rem;  /* 39 */
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Container */
+  --container-max: 1440px;
+  --container-padding: 16px;
+
+  /* Высота шапки (нужна для Hero и якорных ссылок) */
+  --header-h: 72px;
+}
+
+/* ---------- Светлая тема ----------
+   Меняем только переменные — сами правила в других файлах не трогаем.
+   Одни и те же значения записаны дважды:
+   1) автоматически по настройке системы (prefers-color-scheme),
+      если пользователь ещё не выбирал тему вручную;
+   2) по атрибуту data-theme="light", который ставит JS. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --color-text: #1A1714;
+    --color-text-muted: #5C534A;
+    --color-bg: #F7F3EC;
+    --color-bg-alt: #E9E1D3;
+    --color-link: #7A5B16;
+    --color-focus: #1A1714;
+    --color-error: #B3261E;
+    --icon-filter: invert(1);   /* белые иконки становятся чёрными */
+    --shadow-hover: 0 12px 24px rgba(60, 40, 20, .18);
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-text: #1A1714;
+  --color-text-muted: #5C534A;
+  --color-bg: #F7F3EC;
+  --color-bg-alt: #E9E1D3;
+  --color-link: #7A5B16;
+  --color-focus: #1A1714;
+  --color-error: #B3261E;
+  --icon-filter: invert(1);
+  --shadow-hover: 0 12px 24px rgba(60, 40, 20, .18);
+}
+
+/* ---------- Адаптив токенов ---------- */
+@media (min-width: 768px) {
+  :root { --container-padding: 24px; }
+}
