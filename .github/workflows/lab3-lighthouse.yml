@@ -2,9 +2,13 @@ name: Lighthouse CI
 
 on:
   push:
-    branches: [main]
+    paths:
+      - "quality-lab3/**"
+      - ".github/workflows/lab3-lighthouse.yml"
   pull_request:
-    branches: [main]
+    paths:
+      - "quality-lab3/**"
+      - ".github/workflows/lab3-lighthouse.yml"
   workflow_dispatch:
 
 jobs:
