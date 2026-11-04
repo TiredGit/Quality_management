@@ -1,0 +1,213 @@
+/* ==========================================================
+   pages.css — СТИЛИ КОНКРЕТНЫХ СТРАНИЦ
+   То, что нужно только на одной странице или в одном блоке:
+   Hero главной, инструкция, заголовок внутренних страниц,
+   «О нас», контакты, карта.
+   ========================================================== */
+
+/* ==========================================================
+   ГЛАВНАЯ: HERO
+   ========================================================== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* Высота растёт с шириной экрана, но не больше 640px
+     и не выше экрана (минус шапка), чтобы кнопка была видна без прокрутки */
+  min-height: clamp(300px, 56vw, min(640px, calc(100svh - var(--header-h))));
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: -20%;               /* запас сверху для параллакса */
+  left: 0;
+  width: 100%;
+  height: 120%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: translateY(var(--parallax, 0px));   /* значение пишет scroll.js при прокрутке */
+  will-change: transform;
+}
+
+/* затемнение снизу, чтобы текст и кнопка читались на фото */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 20, 20, .8) 0%, rgba(20, 20, 20, 0) 45%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* заголовок в коде идёт первым (для SEO и скринридеров), но показывается под кнопкой */
+.hero__title {
+  order: 2;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: rgba(20, 20, 20, .55);
+  color: var(--color-on-dark);
+  font-size: var(--fs-base);
+  font-weight: 400;
+}
+
+.hero .btn:focus-visible { outline-color: var(--color-on-dark); }
+
+/* ==========================================================
+   ГЛАВНАЯ: ИНСТРУКЦИЯ ПО ЗАПИСИ
+   ========================================================== */
+.how__box {
+  padding: var(--space-lg);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+}
+
+.how__list {
+  display: grid;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.how__phone { margin: 0; }
+
+.how__phone a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================
+   ВСЕ СТРАНИЦЫ: ФИНАЛЬНЫЙ ПРИЗЫВ (CTA)
+   ========================================================== */
+.cta {
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+/* ==========================================================
+   ВНУТРЕННИЕ СТРАНИЦЫ: ЗАГОЛОВОК И ПРИМЕЧАНИЕ
+   ========================================================== */
+.page-head { padding: var(--space-lg) 0 var(--space-md); }
+
+.page-head__title {
+  margin: var(--space-md) 0 var(--space-sm);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+.page-head__lead {
+  max-width: 640px;
+  margin: 0 auto var(--space-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.price-note {
+  max-width: 720px;
+  margin: var(--space-lg) auto 0;
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   КОНТАКТЫ: О НАС, КАРТОЧКИ С КОНТАКТАМИ, КАРТА
+   ========================================================== */
+.about__title {
+  margin: 0 0 var(--space-md);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+
+.about__text p { margin: 0 0 var(--space-md); color: var(--color-text-muted); }
+.about__text p:last-child { margin-bottom: 0; }
+
+/* Фото интерьера: пропорция 4:3, всегда во всю ширину колонки */
+.about__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Карточки с контактами */
+.info-card {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.info-card__title { margin: 0 0 var(--space-xs); font-size: var(--fs-base); font-weight: 600; }
+.info-card__text { margin: 0; font-size: var(--fs-sm); color: var(--color-text-muted); }
+
+.info-card__link,
+.map__link {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.info-card__link:hover,
+.map__link:hover { text-decoration-thickness: 2px; }
+
+.info-card__link:focus-visible,
+.map__link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+/* Карта */
+.map {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.map__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map__note {
+  margin: var(--space-md) 0 0;
+  font-size: var(--fs-sm);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   АДАПТИВ СТРАНИЦ
+   ========================================================== */
+@media (min-width: 768px) {
+  .page-head__title { font-size: var(--fs-3xl); }
+
+  .map { aspect-ratio: 16 / 8; }
+}
+
+/* Пользователи, отключившие анимации в системе: параллакс выключен */
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg { transform: none; }
+}
