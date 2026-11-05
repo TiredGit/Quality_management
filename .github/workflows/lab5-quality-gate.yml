@@ -85,13 +85,6 @@ jobs:
       - name: Run E2E tests
         run: pytest tests/e2e -v
 
-      - name: Upload E2E results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: e2e-results-${{ matrix.browser }}
-          path: quality-lab5/e2e-results/
-
 
   # 3. Lighthouse CI
   lighthouse:
@@ -123,6 +116,8 @@ jobs:
         with:
           name: lighthouse-report
           path: quality-lab5/.lighthouseci/
+          include-hidden-files: true
+          if-no-files-found: warn
 
 
   # 4. Summary
