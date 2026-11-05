@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Мастера барбершопа MAFIOZI: опытные барберы, специалисты по стрижкам, бороде и бритью. Запись к любимому мастеру онлайн.">
+  <title>Мастера — MAFIOZI</title>
+
+  <!-- Применяем сохранённую тему ДО отрисовки страницы, чтобы не было «мигания» -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3ba7hsdd3");
+  </script>
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="logo">
+        <img src="img/hairstyle 1.webp" alt="" class="logo__img" width="40" height="40">
+        <span class="logo__text">MAFIOZI</span>
+      </a>
+
+      <!-- На мобильном это полноэкранное меню, на планшете и десктопе — обычная навигация -->
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <button type="button" class="icon-btn nav__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="services.html" class="nav__link">Услуги</a>
+        <a href="barbers.html" class="nav__link nav__link--active" aria-current="page">Мастера</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему">
+          <img src="img/theme_light_dark_icon_137104 1.svg" alt="" class="theme-toggle__img" width="28" height="28">
+        </button>
+        <button type="button" class="icon-btn burger" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок страницы -->
+    <section class="page-head">
+      <div class="container">
+        <h1 class="page-head__title">Наши мастера</h1>
+        <p class="page-head__lead">В MAFIOZI работают лучшие барберы города с большим опытом. Каждый из них постоянно учится, следит за трендами и знает, как подчеркнуть ваш стиль.</p>
+      </div>
+    </section>
+
+    <!-- Карточки мастеров -->
+    <section class="barbers" id="team">
+      <div class="container">
+        <h2 class="section-title reveal">Команда MAFIOZI</h2>
+        <div class="barbers__grid reveal">
+
+          <article class="barber-card">
+            <img src="img/Barber_1.webp" alt="Барбер Артём" class="barber-card__photo" width="600" height="750" loading="lazy" decoding="async">
+            <div class="barber-card__body">
+              <h3 class="barber-card__name">Артём</h3>
+              <p class="barber-card__role">Старший барбер</p>
+              <p class="barber-card__text">Специалист по классическим стрижкам и фейдам. Любит точные линии и никогда не торопится.</p>
+              <p class="barber-card__meta">Стаж: 9 лет</p>
+              <a href="contacts.html?barber=artem#booking" class="btn btn--secondary btn--sm">Записаться к мастеру</a>
+            </div>
+          </article>
+
+          <article class="barber-card">
+            <img src="img/barber_2.webp" alt="Барбер Дмитрий" class="barber-card__photo" width="600" height="750" loading="lazy" decoding="async">
+            <div class="barber-card__body">
+              <h3 class="barber-card__name">Дмитрий</h3>
+              <p class="barber-card__role">Барбер-стилист</p>
+              <p class="barber-card__text">Мастер моделирования бороды и королевского бритья. Подберёт форму под тип вашего лица.</p>
+              <p class="barber-card__meta">Стаж: 6 лет</p>
+              <a href="contacts.html?barber=dmitry#booking" class="btn btn--secondary btn--sm">Записаться к мастеру</a>
+            </div>
+          </article>
+
+          <article class="barber-card">
+            <img src="img/barber_3.webp" alt="Барбер Кирилл" class="barber-card__photo" width="600" height="750" loading="lazy" decoding="async">
+            <div class="barber-card__body">
+              <h3 class="barber-card__name">Кирилл</h3>
+              <p class="barber-card__role">Барбер</p>
+              <p class="barber-card__text">Быстро и аккуратно делает короткие и средние стрижки. Находит общий язык даже с самыми маленькими клиентами.</p>
+              <p class="barber-card__meta">Стаж: 5 лет</p>
+              <a href="contacts.html?barber=kirill#booking" class="btn btn--secondary btn--sm">Записаться к мастеру</a>
+            </div>
+          </article>
+
+          <article class="barber-card">
+            <img src="img/barber_4.webp" alt="Барбер Роман" class="barber-card__photo" width="600" height="750" loading="lazy" decoding="async">
+            <div class="barber-card__body">
+              <h3 class="barber-card__name">Роман</h3>
+              <p class="barber-card__role">Шеф-барбер</p>
+              <p class="barber-card__text">Основатель команды и участник городских чемпионатов по барберингу. Берётся за сложные образы и VIP-комплексы.</p>
+              <p class="barber-card__meta">Стаж: 12 лет</p>
+              <a href="contacts.html?barber=roman#booking" class="btn btn--secondary btn--sm">Записаться к мастеру</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container cta__inner reveal">
+        <a href="contacts.html#booking" class="btn btn--accent btn--lg">Записаться онлайн</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__line">MAFIOZI</p>
+      <p class="footer__line">г. Москва, ул. Примерная, 10</p>
+      <p class="footer__line">+7 (900) 000-00-00 &nbsp; Ежедневно с 10:00 до 21:00</p>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="index.html" class="footer__link">Главная</a>
+        <a href="services.html" class="footer__link">Услуги</a>
+        <a href="barbers.html" class="footer__link">Мастера</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </nav>
+      <p class="footer__line">© 2026 MAFIOZI. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

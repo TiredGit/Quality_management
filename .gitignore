@@ -4,3 +4,4 @@ quality-lab1/.coverage
 node_modules
 .lighthouseci
 results
+.coverage

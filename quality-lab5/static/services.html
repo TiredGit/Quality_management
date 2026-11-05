@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Услуги и цены барбершопа MAFIOZI: мужские и детские стрижки, моделирование бороды, королевское бритьё и комплексы.">
+  <title>Услуги и цены — MAFIOZI</title>
+
+  <!-- Применяем сохранённую тему ДО отрисовки страницы, чтобы не было «мигания» -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z3ba7hsdd3");
+  </script>
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="logo">
+        <img src="img/hairstyle 1.png" alt="" class="logo__img" width="40" height="40">
+        <span class="logo__text">MAFIOZI</span>
+      </a>
+
+      <!-- На мобильном это полноэкранное меню, на планшете и десктопе — обычная навигация -->
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <button type="button" class="icon-btn nav__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l14 14M19 5L5 19"/>
+          </svg>
+        </button>
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="services.html" class="nav__link nav__link--active" aria-current="page">Услуги</a>
+        <a href="barbers.html" class="nav__link">Мастера</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="icon-btn theme-toggle" aria-label="Переключить тему">
+          <img src="img/theme_light_dark_icon_137104 1.svg" alt="" class="theme-toggle__img" width="28" height="28">
+        </button>
+        <button type="button" class="icon-btn burger" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Заголовок страницы -->
+    <section class="page-head">
+      <div class="container">
+
+        <h1 class="page-head__title">Услуги и цены</h1>
+        <p class="page-head__lead">Честные цены без скрытых доплат. Выберите нужную услугу или комплекс, а мастер подскажет, что подойдёт именно вам.</p>
+
+        <ul class="chips" aria-label="Разделы страницы">
+          <li><a href="#haircuts" class="chip">Стрижки</a></li>
+          <li><a href="#beard" class="chip">Борода и бритьё</a></li>
+          <li><a href="#combos" class="chip">Комплексы</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Стрижки -->
+    <section class="price-section" id="haircuts">
+      <div class="container">
+        <h2 class="section-title reveal">Стрижки</h2>
+        <div class="price-grid reveal">
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Мужская стрижка</h3>
+              <p class="price-card__price">1500 руб.</p>
+            </div>
+            <p class="price-card__text">Классическая стрижка ножницами и машинкой с мытьём головы и укладкой.</p>
+            <p class="price-card__meta">45 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Стрижка машинкой</h3>
+              <p class="price-card__price">1000 руб.</p>
+            </div>
+            <p class="price-card__text">Быстрая стрижка под одну или несколько насадок с оформлением контура.</p>
+            <p class="price-card__meta">30 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Фейд</h3>
+              <p class="price-card__price">1800 руб.</p>
+            </div>
+            <p class="price-card__text">Плавный переход длины от кожи до нужной, точное оформление висков и затылка.</p>
+            <p class="price-card__meta">60 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Детская стрижка</h3>
+              <p class="price-card__price">1200 руб.</p>
+            </div>
+            <p class="price-card__text">Для мальчиков до 12 лет. Спокойная обстановка и аккуратный результат.</p>
+            <p class="price-card__meta">40 минут</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Борода и бритьё -->
+    <section class="price-section" id="beard">
+      <div class="container">
+        <h2 class="section-title reveal">Борода и бритьё</h2>
+        <div class="price-grid reveal">
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Моделирование бороды</h3>
+              <p class="price-card__price">1000 руб.</p>
+            </div>
+            <p class="price-card__text">Придание формы, подравнивание длины и чёткие линии щёк и шеи.</p>
+            <p class="price-card__meta">30 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Королевское бритьё</h3>
+              <p class="price-card__price">1800 руб.</p>
+            </div>
+            <p class="price-card__text">Бритьё опасной бритвой с горячим полотенцем и успокаивающим уходом после.</p>
+            <p class="price-card__meta">40 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Бритьё головы</h3>
+              <p class="price-card__price">1400 руб.</p>
+            </div>
+            <p class="price-card__text">Гладкое бритьё бритвой с распариванием кожи и увлажняющим уходом.</p>
+            <p class="price-card__meta">40 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Оформление усов</h3>
+              <p class="price-card__price">500 руб.</p>
+            </div>
+            <p class="price-card__text">Коррекция формы и длины усов, аккуратное подравнивание.</p>
+            <p class="price-card__meta">15 минут</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Комплексы -->
+    <section class="price-section" id="combos">
+      <div class="container">
+        <h2 class="section-title reveal">Комплексы</h2>
+        <div class="price-grid reveal">
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Стрижка + борода</h3>
+              <p class="price-card__price">2300 руб.</p>
+            </div>
+            <p class="price-card__text">Полный образ за один визит: мужская стрижка и моделирование бороды.</p>
+            <p class="price-card__meta">80 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Отец + сын</h3>
+              <p class="price-card__price">2500 руб.</p>
+            </div>
+            <p class="price-card__text">Две стрижки подряд у одного мастера: мужская и детская.</p>
+            <p class="price-card__meta">80 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">Стрижка + бритьё</h3>
+              <p class="price-card__price">3000 руб.</p>
+            </div>
+            <p class="price-card__text">Мужская стрижка и королевское бритьё опасной бритвой.</p>
+            <p class="price-card__meta">90 минут</p>
+          </article>
+          <article class="price-card">
+            <div class="price-card__head">
+              <h3 class="price-card__title">VIP-комплекс</h3>
+              <p class="price-card__price">4500 руб.</p>
+            </div>
+            <p class="price-card__text">Стрижка, борода, бритьё, уход за кожей и напиток на выбор.</p>
+            <p class="price-card__meta">120 минут</p>
+          </article>
+        </div>
+        <p class="price-note reveal">Цены указаны за стандартную работу. Точная стоимость зависит от длины и густоты волос, мастер назовёт её до начала услуги.</p>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container cta__inner reveal">
+        <a href="contacts.html#booking" class="btn btn--accent btn--lg">Записаться онлайн</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__line">MAFIOZI</p>
+      <p class="footer__line">г. Москва, ул. Примерная, 10</p>
+      <p class="footer__line">+7 (900) 000-00-00 &nbsp; Ежедневно с 10:00 до 21:00</p>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="index.html" class="footer__link">Главная</a>
+        <a href="services.html" class="footer__link">Услуги</a>
+        <a href="barbers.html" class="footer__link">Мастера</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </nav>
+      <p class="footer__line">© 2026 MAFIOZI. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
