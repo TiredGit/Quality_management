@@ -1,0 +1,1 @@
+![Quality Gate](https://github.com/TiredGit/Quality_management/actions/workflows/lab5-quality-gate.yml/badge.svg?branch=master)

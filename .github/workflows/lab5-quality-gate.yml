@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: htmlcov/
+          path: quality-lab5/htmlcov/
 
 
   # 2. E2E - Python Playwright
@@ -90,7 +90,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: e2e-results-${{ matrix.browser }}
-          path: e2e-results/
+          path: quality-lab5/e2e-results/
 
 
   # 3. Lighthouse CI
@@ -122,7 +122,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: .lighthouseci/
+          path: quality-lab5/.lighthouseci/
 
 
   # 4. Summary
