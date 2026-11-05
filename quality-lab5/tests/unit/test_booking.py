@@ -12,7 +12,7 @@ def test_valid_booking(valid_booking_data):
     assert booking.name == "Иван"
     assert booking.service == "Мужская стрижка"
     assert booking.barber == "artem"
-    assert booking.agree is False
+    assert booking.agree is True
 
 
 def test_name_whitespace_is_removed(valid_booking_data):
