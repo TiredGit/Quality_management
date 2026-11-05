@@ -2,10 +2,10 @@
   {
     "url": "http://127.0.0.1:8000/",
     "isRepresentativeRun": false,
-    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_23.report.html",
-    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_23.report.json",
+    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_09_55.report.html",
+    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_09_55.report.json",
     "summary": {
-      "performance": 0.96,
+      "performance": 0.76,
       "accessibility": 1,
       "best-practices": 0.73,
       "seo": 1,
@@ -15,8 +15,8 @@
   {
     "url": "http://127.0.0.1:8000/",
     "isRepresentativeRun": false,
-    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_36.report.html",
-    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_36.report.json",
+    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_10_08.report.html",
+    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_10_08.report.json",
     "summary": {
       "performance": 1,
       "accessibility": 1,
@@ -28,10 +28,10 @@
   {
     "url": "http://127.0.0.1:8000/",
     "isRepresentativeRun": true,
-    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_47.report.html",
-    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_07_47.report.json",
+    "htmlPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_10_20.report.html",
+    "jsonPath": "/home/runner/work/Quality_management/Quality_management/quality-lab5/.lighthouseci/127_0_0_1--2026_11_05_17_10_20.report.json",
     "summary": {
-      "performance": 0.99,
+      "performance": 1,
       "accessibility": 1,
       "best-practices": 0.73,
       "seo": 1,
