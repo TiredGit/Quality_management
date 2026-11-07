@@ -15,7 +15,7 @@ on:
       - master
 
   schedule:
-    - cron: "58 14 * * *"
+    - cron: "8 15 * * *"
 
   workflow_dispatch:
 
