@@ -22,6 +22,6 @@
     "chromatic": "^18.14.2"
   },
   "allowScripts": {
-    "esbuild@0.27.2": true
+    "esbuild@0.27.7": true
   }
 }
