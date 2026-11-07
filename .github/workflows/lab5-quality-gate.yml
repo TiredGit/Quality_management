@@ -5,10 +5,14 @@ on:
     paths:
       - "quality-lab5/**"
       - ".github/workflows/lab5-quality-gate.yml"
+    branches:
+      - master
   pull_request:
     paths:
       - "quality-lab5/**"
       - ".github/workflows/lab5-quality-gate.yml"
+    branches:
+      - master
 
 jobs:
 
