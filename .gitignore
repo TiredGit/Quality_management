@@ -6,3 +6,10 @@ node_modules
 results
 .coverage
 test-results
+
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+htmlcov/
+.env
