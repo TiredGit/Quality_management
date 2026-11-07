@@ -15,7 +15,7 @@ on:
       - master
 
   schedule:
-    - cron: "8 15 * * *"
+    - cron: "45 15 * * *"
 
   workflow_dispatch:
 
@@ -222,7 +222,7 @@ jobs:
           publish_dir: ./artifacts
 
 
-  # 6. Nightly email report
+  # 7. Nightly email report
   email-report:
     runs-on: ubuntu-latest
 
