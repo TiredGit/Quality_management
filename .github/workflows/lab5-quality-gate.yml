@@ -110,14 +110,13 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Update npm
+        run: npm install -g npm@11.19.0
+
+      - name: Check npm version
+        run: npm -v
+
       - run: pip install -r requirements.txt
-      - name: Check Node and npm versions
-        run: |
-          node -v
-          npm -v
-          npm config get legacy-peer-deps
-          npm config get install-links
-          git rev-parse HEAD
       - run: npm ci
       - run: npx lhci autorun
 
@@ -155,6 +154,9 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
+
+      - name: Update npm
+        run: npm install -g npm@11.19.0
 
       - name: Install Node dependencies
         run: npm ci
