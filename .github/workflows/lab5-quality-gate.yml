@@ -111,6 +111,13 @@ jobs:
           node-version: "22"
 
       - run: pip install -r requirements.txt
+      - name: Check Node and npm versions
+        run: |
+          node -v
+          npm -v
+          npm config get legacy-peer-deps
+          npm config get install-links
+          git rev-parse HEAD
       - run: npm ci
       - run: npx lhci autorun
 
