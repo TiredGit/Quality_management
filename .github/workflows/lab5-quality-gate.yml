@@ -120,10 +120,50 @@ jobs:
           if-no-files-found: warn
 
 
-  # 4. Summary
+  # 4. Visual regression tests - Chromatic
+  visual-tests:
+    runs-on: ubuntu-latest
+    needs: python-tests
+
+    defaults:
+      run:
+        working-directory: quality-lab5
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run visual Playwright tests
+        run: npm run test:visual
+
+      - name: Run Chromatic
+        run: npm run chromatic
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+
+  # 5. Summary
   quality-gate:
     runs-on: ubuntu-latest
-    needs: [python-tests, e2e-tests, lighthouse]
+    needs: [python-tests, e2e-tests, lighthouse, visual-tests]
     if: always()
 
     steps:
@@ -132,17 +172,19 @@ jobs:
           echo "Python: ${{ needs.python-tests.result }}"
           echo "E2E: ${{ needs.e2e-tests.result }}"
           echo "Lighthouse: ${{ needs.lighthouse.result }}"
+          echo "Visual tests: ${{ needs.visual-tests.result }}"
 
           if [[ "${{ needs.python-tests.result }}" != "success" ]] || \
              [[ "${{ needs.e2e-tests.result }}" != "success" ]] || \
-             [[ "${{ needs.lighthouse.result }}" != "success" ]]; then
+             [[ "${{ needs.lighthouse.result }}" != "success" ]] || \
+             [[ "${{ needs.visual-tests.result }}" != "success" ]]; then
             echo "QUALITY GATE FAILED"
             exit 1
           fi
 
           echo "QUALITY GATE PASSED"
 
-  # 5. Reports
+  # 6. Reports
   deploy-reports:
     runs-on: ubuntu-latest
     needs: [e2e-tests, lighthouse]
